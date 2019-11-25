@@ -3,36 +3,24 @@ import styled from 'styled-components/macro';
 
 const Logo = () => {
     return (
-        <StyledLogo>
-            <img
-                src='https://i.imgur.com/3D4rwgS.jpg'
-                alt='logo'
-            />
-        </StyledLogo>
+        <StyledLogo
+            src='https://i.imgur.com/3D4rwgS.jpg'
+            alt='logo'
+        />
     )
 }
 
 export default Logo;
 
-const StyledLogo = styled.div`
+const StyledLogo = styled.img`
+    float: left;
 
-    @media only screen and (max-width: 600px) {
-        img { width: 15%; height: auto; }
-    }
-  
-    @media only screen and (min-width: 600px) {
-        img { width: 15%; height: auto; }
-    }
-  
-    @media only screen and (min-width: 768px) {
-        img { width: 15%; height: auto; }
-    }
-  
-    @media only screen and (min-width: 992px) {
-        img { width: 15%; height: auto; }
-    }
-  
-    @media only screen and (min-width: 1200px) {
-        img { width: 15%; height: auto; }
-    }
+    @media only screen and (max-width: 767px) {
+        width: 70px
+      }
+    
+      @media only screen and (min-width: 768px) {
+          width: 80px
+      }
+    
 `;

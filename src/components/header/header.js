@@ -7,8 +7,8 @@ class Header extends Component {
     render(){
         return(
             <HeaderWrapper>
-                <Title />
                 <Logo />
+                <Title />
             </HeaderWrapper>
         )
     }
@@ -18,4 +18,6 @@ export default Header;
 
 const HeaderWrapper = styled.div`
     width: 100%;
+    background-color: ${props => props.theme.primary};
+    clear: both;
 `;
