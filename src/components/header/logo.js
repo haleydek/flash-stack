@@ -16,11 +16,11 @@ const StyledLogo = styled.img`
     float: left;
 
     @media only screen and (max-width: 767px) {
-        width: 70px
+        width: 70px;
       }
     
-      @media only screen and (min-width: 768px) {
-          width: 80px
-      }
+    @media only screen and (min-width: 768px) {
+        width: 80px
+    }
     
 `;

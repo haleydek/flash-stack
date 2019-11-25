@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components/macro';
-import Header from './components/header/header';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <AppWrapper>
         <Header/>
         <p>Hello World</p>
+        <Footer/>
       </AppWrapper>
     </ThemeProvider>
   );
@@ -20,8 +22,9 @@ const font = "Roboto, sans-serif";
 
 const AppWrapper = styled.div`
   box-sizing: border-box;
+  min-height: 100vh;
   overflow: hidden;
-  display: grid;
+  display: block;
   font-family: ${font};
   font-size: 16px;
 
@@ -36,5 +39,9 @@ const AppWrapper = styled.div`
 
 const theme = {
   primary: '#3C435D',
-  secondary: '#E8F79A'
+  secondary: '#E8F79A',
+  primaryLight: '#EBECEE',
+  seconaryDark: '#DDF36B',
+
+  smallFont: '12px'
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/macro';
-import Title from './title';
-import Logo from './logo';
+import Title from './Title';
+import Logo from './Logo';
 
 class Header extends Component {
     render(){
@@ -17,7 +17,8 @@ class Header extends Component {
 export default Header;
 
 const HeaderWrapper = styled.div`
+    display: inline-block;
+    clear: both;
     width: 100%;
     background-color: ${props => props.theme.primary};
-    clear: both;
 `;
