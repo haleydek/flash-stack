@@ -2,46 +2,38 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 const Page = () => {
-    return <StyledPage><StyledPageSection>Hello World</StyledPageSection></StyledPage>
+    return <StyledPage><InnerPage><p>Hello World</p><p>Hello World</p><p>Hello World</p></InnerPage></StyledPage>
 }
 
 export default Page;
 
 const StyledPage = styled.div`
-
-@media only screen and (max-width: 767px) {
     position: relative;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 100%
-  }
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
 
-  @media only screen and (min-width: 768px) {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    background-color: pink;
-  }
 `;
 
-const StyledPageSection = styled.div`
+const InnerPage = styled.div`
 
-@media only screen and (max-width: 767px) {
-    position: relative;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 100%
-  }
+    @media only screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
 
-  @media only screen and (min-width: 768px) {
-    display: block;
-    line-height: 0px;
-    position: relative;
-    max-width: 1440px;
-    background-color: pink;
-  }
+    @media only screen and (min-width: 768px) {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 auto;
+    }
 `;
