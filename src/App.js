@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components/macro';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Page from './components/Page';
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <AppWrapper>
         <Header/>
-        <p>Hello World</p>
+        <Page />
         <Footer/>
       </AppWrapper>
     </ThemeProvider>

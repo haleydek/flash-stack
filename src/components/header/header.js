@@ -21,4 +21,7 @@ const HeaderWrapper = styled.div`
     clear: both;
     width: 100%;
     background-color: ${props => props.theme.primary};
+    margin: 0;
+    padding: 0;
+    overflow: auto;
 `;
