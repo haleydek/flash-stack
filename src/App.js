@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components/macro';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -7,13 +8,15 @@ import Page from './components/Page';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <AppWrapper>
-        <Header/>
-        <Page />
-        <Footer/>
-      </AppWrapper>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <AppWrapper>
+          <Header/>
+            <Route exact path="/" component={Page} />
+          <Footer/>
+        </AppWrapper>
+      </ThemeProvider>
+    </Router>
   );
 }
 
