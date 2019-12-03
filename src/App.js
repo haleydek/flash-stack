@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components/macro';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import Page from './components/Page';
+import StackForm from './components/stack/Form';
 
 
 function App() {
@@ -12,7 +12,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <AppWrapper>
           <Header/>
-            <Route exact path="/" component={Page} />
+          <PageWrapper>
+            <PageInner>
+              <Route exact path="/" component={StackForm} />
+            </PageInner>
+          </PageWrapper>
           <Footer/>
         </AppWrapper>
       </ThemeProvider>
@@ -21,6 +25,15 @@ function App() {
 }
 
 export default App;
+
+const theme = {
+  primary: '#3C435D',
+  secondary: '#E8F79A',
+  primaryLight: '#EBECEE',
+  seconaryDark: '#DDF36B',
+
+  smallFont: '12px'
+}
 
 const font = "Roboto, sans-serif";
 
@@ -41,11 +54,32 @@ const AppWrapper = styled.div`
   }
 `;
 
-const theme = {
-  primary: '#3C435D',
-  secondary: '#E8F79A',
-  primaryLight: '#EBECEE',
-  seconaryDark: '#DDF36B',
+const PageWrapper = styled.div`
+position: relative;
+width: 100vw;
+height: 100%;
+margin: 0;
+padding: 0;
+overflow: auto;
+`;
 
-  smallFont: '12px'
-}
+const PageInner = styled.div`
+
+    @media only screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    @media only screen and (min-width: 768px) {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 auto;
+    }
+`;
