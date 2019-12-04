@@ -17,6 +17,8 @@ class StackForm extends Component {
 
         // parse string to create front and back of notecards
         // from notes pasted into textarea
+
+        console.log(this.state.notes.split("\n"))
     }
 
     render (){
