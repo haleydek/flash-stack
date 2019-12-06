@@ -3,12 +3,14 @@ import styled from 'styled-components/macro';
 
 class StackForm extends Component {
     state = {
-        notes: ''
+        notes: [],
+        cards: []
     }
 
     handleChange = (event) => {
         this.setState({
-            notes: event.target.value
+            notes: event.target.value,
+            cards: [...this.state.cards]
         })
     }
 
@@ -18,7 +20,21 @@ class StackForm extends Component {
         // parse string to create front and back of notecards
         // from notes pasted into textarea
 
-        console.log(this.state.notes.split("\n"))
+        const notes = this.state.notes.split("\n");
+
+        const cards = notes.map(note => {
+            let frontAndBack = note.split("-");
+
+            let card = {
+                front: frontAndBack[0],
+                back: frontAndBack[1]
+            };
+
+            return card;
+        })
+
+        console.log(cards);
+
     }
 
     render (){
