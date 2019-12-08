@@ -39,11 +39,9 @@ class StackForm extends Component {
 
     render (){
         return (
-            <StyledStackForm>
-                <form onSubmit={this.handleSubmit}>
-                    <textarea value={this.state.notes} onChange={this.handleChange} />
-                    <input type='submit' value='Create Stack' />
-                </form>
+            <StyledStackForm onSubmit={this.handleSubmit}>
+                <StyledTextArea value={this.state.notes} onChange={this.handleChange} />
+                <input type='submit' value='Create Stack' />
             </StyledStackForm>
         )
     }
@@ -51,6 +49,24 @@ class StackForm extends Component {
 
 export default StackForm;
 
-const StyledStackForm = styled.div`
+const StyledStackForm = styled.form`
+    @media only screen and (max-width: 767px) {
+        width: 260px;
+    }
 
+    @media only screen and (min-width: 768px) {
+        width: 500px;
+    }
+`;
+
+const StyledTextArea = styled.textarea`
+    width: 100%;
+
+    @media only screen and (max-width: 767px) {
+        height: 156px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        height: 300px;
+    }
 `;
