@@ -31,18 +31,16 @@ const theme = {
   secondary: '#E8F79A',
   primaryLight: '#EBECEE',
   seconaryDark: '#DDF36B',
-
+  font: 'Roboto, sans-serif',
   smallFont: '12px'
 }
-
-const font = "Roboto, sans-serif";
 
 const AppWrapper = styled.div`
   box-sizing: border-box;
   min-height: 100vh;
   overflow: hidden;
   display: block;
-  font-family: ${font};
+  font-family: ${props => props.theme.font};
   font-size: 16px;
 
   @media only screen and (max-width: 767px) {
