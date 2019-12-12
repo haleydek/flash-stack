@@ -14,7 +14,7 @@ function App() {
           <Header/>
           <PageWrapper>
             <PageInner>
-              <Route exact path="/" component={StackForm} />
+              <Route exact path="/new" component={StackForm} />
             </PageInner>
           </PageWrapper>
           <Footer/>
