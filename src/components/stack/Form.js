@@ -61,6 +61,10 @@ const StyledStackForm = styled.form`
 
 const StyledTextArea = styled.textarea`
     width: 100%;
+    border-radius: 25px;
+    border: 3px solid ${props => props.theme.primaryLight};
+    padding: 20px;
+    font-size: 16px;
 
     @media only screen and (max-width: 767px) {
         height: 156px;
