@@ -26,8 +26,8 @@ class StackForm extends Component {
             let frontAndBack = note.split("-");
 
             let card = {
-                front: frontAndBack[0],
-                back: frontAndBack[1]
+                front: frontAndBack[0].trim(),
+                back: frontAndBack[1].trim()
             };
 
             return card;
