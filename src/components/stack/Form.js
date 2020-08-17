@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components/macro';
 
 class StackForm extends Component {
-    state = {
-        notes: [],
-        cards: []
+    constructor() {
+        super()
+        this.state = {
+            notes: [],
+            cards: []
+        }    
     }
 
     handleChange = (event) => {
@@ -65,6 +68,7 @@ const StyledTextArea = styled.textarea`
     border: 3px solid ${props => props.theme.primaryLight};
     padding: 20px;
     font-size: 16px;
+    resize: none;
 
     @media only screen and (max-width: 767px) {
         height: 156px;

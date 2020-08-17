@@ -1,9 +1,11 @@
 import React from 'react';
+// import { connect } from 'react-redux';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components/macro';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import StackForm from './components/stack/Form';
+//import StackForm from './components/stack/Form';
+import StackInput from './components/stack/Input';
 
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
           <Header/>
           <PageWrapper>
             <PageInner>
-              <Route exact path="/new" component={StackForm} />
+              <Route exact path="/new" component={StackInput} />
             </PageInner>
           </PageWrapper>
           <Footer/>
@@ -54,30 +56,18 @@ const AppWrapper = styled.div`
 
 const PageWrapper = styled.div`
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: auto;
+  clear: both;
 `;
 
 const PageInner = styled.div`
-
-  @media only screen and (max-width: 767px) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-  }
-
-  @media only screen and (min-width: 768px) {
-      max-width: 1440px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
 `;
