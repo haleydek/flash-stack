@@ -4,7 +4,7 @@ import styled from 'styled-components/macro';
 const FooterContent = () => {
     return (
         <StyledFooterContent>
-            © 2019 HALEY DEKEYSER
+            © {new Date().getFullYear()} HALEY DEKEYSER
         </StyledFooterContent>
     )
 }

@@ -12,7 +12,7 @@ const Footer = () => {
 
 export default Footer;
 
-const FooterWrapper = styled.span`
+const FooterWrapper = styled.div`
     position: absolute;
     display: inline-block;
     width: 100%;
